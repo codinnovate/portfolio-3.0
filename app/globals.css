@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 13 17 23;
+  --foreground: 230 237 243;
+  --card: 22 27 34;
+  --card-foreground: 230 237 243;
+  --popover: 22 27 34;
+  --popover-foreground: 230 237 243;
+  --primary: 88 166 255;
+  --primary-foreground: 13 17 23;
+  --secondary: 33 38 45;
+  --secondary-foreground: 240 246 252;
+  --muted: 33 38 45;
+  --muted-foreground: 125 133 144;
+  --accent: 33 38 45;
+  --accent-foreground: 240 246 252;
+  --destructive: 248 81 73;
+  --destructive-foreground: 240 246 252;
+  --border: 48 54 61;
+  --input: 48 54 61;
+  --ring: 88 166 255;
+  --chart-1: 88 166 255;
+  --chart-2: 46 164 79;
+  --chart-3: 251 188 5;
+  --chart-4: 245 101 101;
+  --chart-5: 159 122 234;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #161b22;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+/* Smooth animations */
+.grid-cols-53 {
+  grid-template-columns: repeat(53, minmax(0, 1fr));
+}
+
+/* Contribution graph responsive adjustments */
+@media (max-width: 768px) {
+  .grid-cols-53 {
+    grid-template-columns: repeat(26, minmax(0, 1fr));
+  }
+}
+
+/* Custom hover effects */
+.group:hover .group-hover\:scale-105 {
+  transform: scale(1.05);
+}
+
+/* Text selection styling */
+::selection {
+  background-color: rgba(88, 166, 255, 0.3);
+  color: #f0f6fc;
+}
+
+/* Focus visible styling */
+*:focus-visible {
+  outline: 2px solid #58a6ff;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for all interactive elements */
+a, button, input, select, textarea {
+  transition: all 0.15s ease-in-out;
+}
+
+/* Loading skeleton animations */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s linear infinite;
+  background: linear-gradient(
+    90deg,
+    #161b22 0px,
+    #21262d 40px,
+    #161b22 80px
+  );
+  background-size: 200px 100%;
+}
