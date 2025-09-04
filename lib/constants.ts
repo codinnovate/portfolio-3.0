@@ -11,7 +11,7 @@ export const companies: Company[] = [
     name: "Passpadi",
     role: "Senior Full Stack Developer",
     period: "May 2025 - Present",
-    logo: "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=60&h=60&dpr=1",
+    logo: "https://www.passpadi.com/logo.svg",
     description: "Leading development of EdTech and AI-powered educational solutions, creating innovative learning platforms.",
     technologies: ["React", "Node.js", "AI/ML", "TypeScript", "Python"],
     website: "https://passpadi.com"
@@ -20,9 +20,9 @@ export const companies: Company[] = [
     name: "Qataloog",
     role: "Full Stack Developer",
     period: "Dec 2024 - May 2025",
-    logo: "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=60&h=60&dpr=1",
+    logo: "https://www.qataloog.com/favicon/favicon-qataloog.svg",
     description: "Developed B2B EdTech solutions and Learning Management Systems for educational institutions.",
-    technologies: ["Vue.js", "JavaScript", "LMS", "B2B Solutions"],
+    technologies: ["React.js", "JavaScript", "LMS", "B2B Solutions"],
     website: "https://qataloog.com"
   },
   {
@@ -38,7 +38,7 @@ export const companies: Company[] = [
     name: "Smartteller.net",
     role: "Frontend Developer",
     period: "Feb 2021 - Jul 2022",
-    logo: "https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=60&h=60&dpr=1",
+    logo: "https://smartteller.net/assets/img/icon.png",
     description: "Built digital banking solutions and fintech applications, focusing on user experience and security.",
     technologies: ["React", "JavaScript", "Fintech", "Digital Banking"],
     website: "https://smartteller.net"
@@ -92,7 +92,8 @@ export const getAchievements = async (): Promise<IAchievement[]> => {
         title: "Portfolio Launch",
         description: "Successfully launched personal portfolio website",
         date: "2024-01-15",
-        category: "Development",
+        category: "project",
+        issuer: "Self",
         icon: "Rocket"
       }
     ];
